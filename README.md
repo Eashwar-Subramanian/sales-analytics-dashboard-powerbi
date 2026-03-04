@@ -1,17 +1,32 @@
-# AtliQ Hardware Sales Analytics Dashboard  
-**Projected 7% revenue uplift through data-driven regional optimization**
+# Sales Analytics Dashboard (Power BI + MySQL)
 
-## 💰 Business Results
-- **Revenue Impact:** Identified underperforming regions with 7% uplift potential
-- **Operational Efficiency:** Automated reporting saving 10 hours/week for sales team
-- **Data Integration:** 4 years of sales history consolidated into single dashboard
+Power BI dashboard project packaged with a MySQL database dump so reviewers can recreate the source data and reproduce the model.
 
-## 🎯 Stakeholder Value
-**Sales Director:** Real-time performance tracking across regions  
-**Marketing Team:** Product performance insights for campaign optimization  
-**Analytics Team:** Automated ETL pipeline reducing manual reporting
+---
 
-## 🔧 Technical Stack
-**Data Source:** MySQL database with 4 years transactional history  
-**ETL Process:** Power BI with automated data refresh  
-**Dashboard:** Interactive visualizations with drill-down capabilities
+## What this repo contains
+- Power BI dashboard (`.pbix`)
+- MySQL dump (`.sql`) that recreates the dataset locally
+
+---
+
+## How to reproduce (MySQL + Power BI)
+1) Restore the database:
+   - Create a database in MySQL
+   - Import `db_dump.sql`
+
+2) Open the dashboard:
+   - `Sales Insight Project.pbix`
+   - Point the data source to your local MySQL instance if Power BI prompts for credentials
+
+---
+
+## Files
+- `Sales Insight Project.pbix`
+- `db_dump.sql`
+
+---
+
+## Review request
+Open an Issue titled: **Review: sales-analytics-dashboard-powerbi**  
+Feedback wanted: dashboard structure, measure naming, and what a hiring manager would want to see first.
