@@ -1,32 +1,26 @@
 # Sales Analytics Dashboard (Power BI + MySQL)
 
-Power BI dashboard project packaged with a MySQL database dump so reviewers can recreate the source data and reproduce the model.
+Power BI sales dashboard packaged with a MySQL database dump so reviewers can recreate the source data locally and reproduce the model.
 
----
+## What’s in this repo
+- `Sales Insight Project.pbix` — Power BI dashboard
+- `db_dump.sql` — MySQL dump that recreates the dataset
 
-## What this repo contains
-- Power BI dashboard (`.pbix`)
-- MySQL dump (`.sql`) that recreates the dataset locally
+## How to reproduce (MySQL → Power BI)
+### 1) Restore the database
+Use any MySQL client (Workbench / DBeaver / CLI) and run:
 
----
+1. Create a database (example name: `sales_analytics`)
+2. Import `db_dump.sql` into that database
 
-## How to reproduce (MySQL + Power BI)
-1) Restore the database:
-   - Create a database in MySQL
-   - Import `db_dump.sql`
+### 2) Open the dashboard
+1. Open `Sales Insight Project.pbix`
+2. If Power BI prompts for credentials:
+   - Point the data source to your local MySQL instance
+   - Select the restored database (the one you imported the dump into)
 
-2) Open the dashboard:
-   - `Sales Insight Project.pbix`
-   - Point the data source to your local MySQL instance if Power BI prompts for credentials
-
----
-
-## Files
-- `Sales Insight Project.pbix`
-- `db_dump.sql`
-
----
-
-## Review request
-Open an Issue titled: **Review: sales-analytics-dashboard-powerbi**  
-Feedback wanted: dashboard structure, measure naming, and what a hiring manager would want to see first.
+## Feedback I want
+Open a GitHub Issue titled: **Review: sales-analytics-dashboard-powerbi** and tell me:
+1) Whether the dashboard structure is easy to understand in under 30 seconds  
+2) Which visuals feel redundant vs essential  
+3) What a hiring manager would want to see first on the landing page
